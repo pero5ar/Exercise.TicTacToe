@@ -26,8 +26,8 @@ namespace TicTacToeWPFApp
         {
             _matrix = new MatrixGrid();
             _players = new Player[2];
-            _players[1] = new Player(_matrix, 'X', firstPlayerName);
-            _players[2] = new Player(_matrix, 'O', secondPlayerName);
+            _players[0] = new Player(_matrix, 'X', firstPlayerName);
+            _players[1] = new Player(_matrix, 'O', secondPlayerName);
             InitializeComponent();
         }
         
