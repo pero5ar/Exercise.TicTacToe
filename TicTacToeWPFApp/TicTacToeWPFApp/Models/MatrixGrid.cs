@@ -51,7 +51,7 @@
 
         public bool IsMatrixGridFull()
         {
-            return _moveCounter < SIZE;
+            return _moveCounter >= SIZE;
         }
 
         public bool InspectWinningCondition(char mark)
