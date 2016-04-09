@@ -14,18 +14,19 @@
     public class MatrixGrid
     {
         private char[] _matrix;
+        private int _moveCounter;
 
         private const int SIZE = 9;
         private const int ORDER = 3;
-        private const int NON_EXISTENT = -1;
 
+        public const int NON_EXISTENT = -1;
         public const int MAIN_DIAGONAL = 1;
         public const int SECONDARY_DIAGONAL = 2;
-
 
         public MatrixGrid()
         {
             _matrix = new char[SIZE];
+            _moveCounter = 0;
         }
 
         public bool IsElementEmpty(int index)
@@ -44,7 +45,13 @@
                 return false;
             }
             _matrix[index] = mark;
+            _moveCounter++;
             return true;
+        }
+
+        public bool IsMatrixGridFull()
+        {
+            return _moveCounter < SIZE;
         }
 
         public bool InspectWinningCondition(char mark)
